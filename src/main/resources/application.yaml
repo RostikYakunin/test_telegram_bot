@@ -1,6 +1,13 @@
+server:
+  port: 8080
+
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/test_bot
     username: postgres
     password: Rost
+
+telegram-bot:
+  token: 6647506538:AAG5drN7cHQUpUtm6Fz9bn79F50L6KIVTRE
+  name: rost_yak_test_bot
