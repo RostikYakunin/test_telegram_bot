@@ -34,4 +34,6 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build with Gradle
-        run: ./gradlew build
+        uses: gradle/gradle-build-action@v8.2.1
+        with:
+          arguments: build
