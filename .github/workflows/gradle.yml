@@ -30,10 +30,16 @@ jobs:
         with:
           java-version: 11
 
+      - name: Install Gradle
+        run: |
+          wget https://services.gradle.org/distributions/gradle-8.2.1-bin.zip
+          unzip -d /opt/gradle gradle-8.2.1-bin.zip
+          export PATH=$PATH:/opt/gradle/gradle-8.2.1/bin
+        if: matrix.os == 'ubuntu-latest'
+
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
       - name: Build with Gradle
-        uses: gradle/gradle-build-action@v8.2.1
-        with:
-          arguments: build
+        run: ./gradlew build
+
