@@ -33,7 +33,6 @@ jobs:
         architecture: x64
     - name: Make gradlew executable
       run: chmod +x ./gradlew
-    - run: ./gradlew build --no-daemon
     - name: Build with Gradle
       uses: gradle/gradle-build-action@v2 
       with:
