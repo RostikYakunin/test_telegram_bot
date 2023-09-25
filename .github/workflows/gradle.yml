@@ -38,5 +38,5 @@ jobs:
       run: |
         curl -o test_report.html file:///home/runner/work/test_telegram_bot/test_telegram_bot/build/reports/tests/test/index.html
     - name: Build with Gradle Wrapper
-      run: ./gradlew build --no-daemon --stacktrace
+      run: ./gradlew build --no-daemon --stacktrace -Xlint:deprecation
 
