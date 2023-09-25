@@ -33,7 +33,7 @@ jobs:
         architecture: x64
     - name: Make gradlew executable
       run: chmod +x ./gradlew
-    - run: ./gradlew build --no-daemon
+    - run: ./gradlew build --no-daemon --stacktrace
     - name: Download test report
       run: |
         curl -o test_report.html file:///home/runner/work/test_telegram_bot/test_telegram_bot/build/reports/tests/test/index.html
